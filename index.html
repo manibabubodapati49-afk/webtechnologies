@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bodapati Mani Babu | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#f5fbff;
+    color:#333;
+}
+
+/* Navbar */
+
+nav{
+    position:sticky;
+    top:0;
+    width:100%;
+    background:#ffffff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    z-index:1000;
+}
+
+nav h2{
+    color:#2196f3;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#333;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#2196f3;
+}
+
+/* Hero */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+    background:linear-gradient(135deg,#e3f2fd,#ffffff);
+}
+
+.hero-content h1{
+    font-size:48px;
+    color:#1976d2;
+    margin-bottom:10px;
+}
+
+.hero-content h3{
+    color:#555;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    max-width:650px;
+    margin:auto;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 30px;
+    background:#2196f3;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#1976d2;
+}
+
+/* Sections */
+
+section{
+    padding:70px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:34px;
+    color:#1976d2;
+    margin-bottom:40px;
+}
+
+/* About */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+.about-card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    line-height:1.8;
+}
+
+/* Skills */
+
+.skills-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:20px;
+}
+
+.skill{
+    background:white;
+    padding:20px;
+    text-align:center;
+    border-radius:10px;
+    font-weight:bold;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.skill:hover{
+    transform:translateY(-5px);
+    background:#e3f2fd;
+}
+
+/* Projects */
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:white;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-5px);
+}
+
+.project-card h3{
+    color:#1976d2;
+    margin-bottom:15px;
+}
+
+/* Contact */
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.contact-box input,
+.contact-box textarea{
+    width:100%;
+    padding:14px;
+    margin-bottom:18px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+}
+
+.contact-box textarea{
+    resize:none;
+    height:140px;
+}
+
+.contact-box button{
+    width:100%;
+    padding:14px;
+    border:none;
+    background:#2196f3;
+    color:white;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.contact-box button:hover{
+    background:#1976d2;
+}
+
+/* Footer */
+
+footer{
+    background:#1976d2;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.hero-content h1{
+    font-size:36px;
+}
+
+.hero-content h3{
+    font-size:20px;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<nav>
+    <h2>Portfolio</h2>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>Bodapati Mani Babu</h1>
+
+<h3>Computer Engineering Student | Web Developer | Programmer</h3>
+
+<p>
+Passionate Computer Engineering student with strong interest in software development and web technologies. I enjoy creating practical applications, solving programming problems, and continuously learning modern technologies.
+</p>
+
+<a href="#contact" class="btn">Contact Me</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="about">
+
+<div class="about-card">
+
+<p>
+Hello! I'm <strong>Bodapati Mani Babu</strong>, a Computer Engineering student passionate about programming and web development. I enjoy building responsive websites and solving real-world problems through technology. My goal is to become a skilled software developer by continuously improving my coding skills and gaining practical experience.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skills-container">
+
+<div class="skill">C</div>
+
+<div class="skill">Java</div>
+
+<div class="skill">Python</div>
+
+<div class="skill">JavaScript</div>
+
+<div class="skill">HTML</div>
+
+<div class="skill">CSS</div>
+
+<div class="skill">SQL</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
+
+<div class="project-card">
+
+<h3>Smart Parking System</h3>
+
+<p>
+A parking management system that helps users locate available parking spaces efficiently while improving parking management through digital automation.
+</p>
+
+</div>
+
+<div class="project-card">
+
+<h3>Social Event Management</h3>
+
+<p>
+A web-based application developed to organize and manage social events. It provides event creation, participant management, and streamlined event organization.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact Me</h2>
+
+<div class="contact-box">
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<textarea placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Bodapati Mani Babu. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>
