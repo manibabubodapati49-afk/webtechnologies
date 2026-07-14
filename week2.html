@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Profile</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: #eef7ff;
+        }
+
+        /* Navbar */
+
+        .navbar {
+            background: linear-gradient(90deg, #0d6efd, #4ea5ff);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, .15);
+        }
+
+        .navbar-brand {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: white !important;
+        }
+
+        .nav-link {
+            color: white !important;
+            margin-left: 15px;
+            transition: .3s;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: yellow !important;
+        }
+
+        /* Hero */
+
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #d7ecff, #ffffff);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #0d6efd;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .hero img {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid white;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .2);
+        }
+
+        .btn-custom {
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 18px;
+            transition: .3s;
+        }
+
+        .btn-custom:hover {
+            transform: scale(1.05);
+        }
+
+        /* Profile Card */
+
+        .profile-section {
+            margin-top: -40px;
+            margin-bottom: 70px;
+        }
+
+        .profile-card {
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+            transition: .3s;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card-header {
+            background: #0d6efd;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 6px solid #0d6efd;
+            object-fit: cover;
+            display: block;
+            margin: 25px auto;
+        }
+
+        .info i {
+            color: #0d6efd;
+            margin-right: 8px;
+        }
+
+        .info p {
+            font-size: 17px;
+            margin-bottom: 12px;
+        }
+
+        .badge {
+            font-size: .9rem;
+        }
+
+        /* Section Title */
+
+        .section-title {
+            text-align: center;
+            color: #0d6efd;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-person-circle"></i>
+                Student Profile
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#academics">Academics</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-7">
+
+                    <span class="badge bg-primary px-3 py-2 mb-3">
+                        Information Technology Student
+                    </span>
+
+                    <h1>Bodapati Mani Babu</h1>
+
+                    <p class="my-4">
+
+                        Welcome to my Student Profile webpage.
+                        I am passionate about Web Development,
+                        Java Programming and Python. I enjoy
+                        building responsive websites and
+                        innovative software solutions.
+
+                    </p>
+
+                    <a href="#about" class="btn btn-primary btn-custom me-3">
+                        View Profile
+                    </a>
+
+                    <a href="#contact" class="btn btn-outline-primary btn-custom">
+                        Contact Me
+                    </a>
+
+                </div>
+
+                <div class="col-lg-5 text-center mt-5 mt-lg-0">
+
+                    <!-- Replace image -->
+                    <img src="C:\Users\Mani babu\Downloads\MANIBABUDOCS\manigptphoto.jpeg"alt="Student">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= PROFILE CARD ================= -->
+
+    <section class="profile-section">
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-8">
+
+                    <div class="card profile-card">
+
+                        <div class="card-header">
+
+                            <h2>
+                                <i class="bi bi-person-vcard-fill"></i>
+                                Student Information
+                            </h2>
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <img src="C:\Users\Mani babu\Downloads\MANIBABUDOCS\MANI_IMG.jpeg"
+                                class="profile-photo"
+                                alt="Student">
+
+                            <div class="row info">
+
+                                <div class="col-md-6">
+
+                                    <p>
+                                        <i class="bi bi-person-fill"></i>
+                                        <strong>Name :</strong>
+                                        Bodapati Mani Babu
+                                    </p>
+
+                                    <p>
+                                        <i class="bi bi-hash"></i>
+                                        <strong>Roll No :</strong>
+                                        A24126511187
+                                    </p>
+
+                                    <p>
+                                        <i class="bi bi-mortarboard-fill"></i>
+                                        <strong>Branch :</strong>
+                                        Information Technology
+                                    </p>
+
+                                    <p>
+                                        <i class="bi bi-building"></i>
+                                        <strong>College :</strong>
+                                        ANITS Engineering College
+                                    </p>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <p>
+                                        <i class="bi bi-envelope-fill"></i>
+                                        <strong>Email :</strong>
+                                        manibabubodapati49@gmail.com
+                                    </p>
+
+                                    <p>
+                                        <i class="bi bi-telephone-fill"></i>
+                                        <strong>Phone :</strong>
+                                        +91 8333033299
+                                    </p>
+
+                                    <p>
+                                        <i class="bi bi-geo-alt-fill"></i>
+                                        <strong>Location :</strong>
+                                        Visakhapatnam
+                                    </p>
+
+                                    <p>
+                                        <i class="bi bi-calendar-check-fill"></i>
+                                        <strong>Academic Year :</strong>
+                                        B.Tech III Year
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===== Part 2 starts from About Section ===== -->
+
+        <!-- ================= ABOUT SECTION ================= -->
+
+    <section id="about" class="py-5">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                <i class="bi bi-person-lines-fill"></i>
+                About Me
+            </h2>
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-10">
+
+                    <div class="card border-0 shadow-lg rounded-4">
+
+                        <div class="card-body p-5">
+
+                            <p class="fs-5 text-secondary text-center">
+
+                                Hello! I am <strong>Bodapati Mani Babu</strong>,
+                                currently pursuing <strong>B.Tech 3rd Year in Information Technology</strong>
+                                at <strong>ANITS Engineering College</strong>.
+                                I am passionate about Web Development, Java,
+                                Python and Database Management Systems.
+
+                                I enjoy designing responsive websites and solving
+                                real-world problems through programming.
+                                My goal is to become a skilled Software Developer
+                                and continuously improve my technical knowledge.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= SKILLS SECTION ================= -->
+
+    <section id="skills" class="py-5 bg-white">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                <i class="bi bi-code-slash"></i>
+                Technical Skills
+            </h2>
+
+            <div class="row">
+
+                <div class="col-lg-6">
+
+                    <h5>HTML</h5>
+                    <div class="progress mb-4" style="height:22px;">
+                        <div class="progress-bar bg-primary" style="width:95%;">
+                            95%
+                        </div>
+                    </div>
+
+                    <h5>CSS</h5>
+                    <div class="progress mb-4" style="height:22px;">
+                        <div class="progress-bar bg-info" style="width:90%;">
+                            90%
+                        </div>
+                    </div>
+
+                    <h5>Bootstrap</h5>
+                    <div class="progress mb-4" style="height:22px;">
+                        <div class="progress-bar bg-success" style="width:90%;">
+                            90%
+                        </div>
+                    </div>
+
+                    <h5>JavaScript</h5>
+                    <div class="progress mb-4" style="height:22px;">
+                        <div class="progress-bar bg-warning text-dark" style="width:80%;">
+                            80%
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <h5>Java</h5>
+                    <div class="progress mb-4" style="height:22px;">
+                        <div class="progress-bar bg-danger" style="width:85%;">
+                            85%
+                        </div>
+                    </div>
+
+                    <h5>Python</h5>
+                    <div class="progress mb-4" style="height:22px;">
+                        <div class="progress-bar bg-dark" style="width:85%;">
+                            85%
+                        </div>
+                    </div>
+
+                    <h5>C Programming</h5>
+                    <div class="progress mb-4" style="height:22px;">
+                        <div class="progress-bar bg-secondary" style="width:80%;">
+                            80%
+                        </div>
+                    </div>
+
+                    <h5>SQL</h5>
+                    <div class="progress mb-4" style="height:22px;">
+                        <div class="progress-bar bg-primary" style="width:88%;">
+                            88%
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="text-center mt-4">
+
+                <span class="badge bg-primary p-3 m-2">HTML5</span>
+                <span class="badge bg-success p-3 m-2">CSS3</span>
+                <span class="badge bg-info p-3 m-2">Bootstrap</span>
+                <span class="badge bg-warning text-dark p-3 m-2">JavaScript</span>
+                <span class="badge bg-danger p-3 m-2">Java</span>
+                <span class="badge bg-dark p-3 m-2">Python</span>
+                <span class="badge bg-secondary p-3 m-2">SQL</span>
+                <span class="badge bg-primary p-3 m-2">React</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= ACADEMIC DETAILS ================= -->
+
+    <section id="academics" class="py-5">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                <i class="bi bi-book-half"></i>
+                Academic Details
+            </h2>
+
+            <div class="table-responsive shadow rounded-4">
+
+                <table class="table table-bordered table-hover table-striped align-middle text-center">
+
+                    <thead class="table-primary">
+
+                        <tr>
+
+                            <th>Subject</th>
+                            <th>Internal</th>
+                            <th>External</th>
+                            <th>Total</th>
+                            <th>Result</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>Web Technologies</td>
+                            <td>29</td>
+                            <td>64</td>
+                            <td class="fw-bold text-success">93</td>
+                            <td><span class="badge bg-success">Pass</span></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Java Programming</td>
+                            <td>28</td>
+                            <td>62</td>
+                            <td class="fw-bold text-success">90</td>
+                            <td><span class="badge bg-success">Pass</span></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Python Programming</td>
+                            <td>30</td>
+                            <td>65</td>
+                            <td class="fw-bold text-success">95</td>
+                            <td><span class="badge bg-success">Pass</span></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Database Management System</td>
+                            <td>27</td>
+                            <td>60</td>
+                            <td class="fw-bold text-success">87</td>
+                            <td><span class="badge bg-success">Pass</span></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Operating System</td>
+                            <td>26</td>
+                            <td>61</td>
+                            <td class="fw-bold text-success">87</td>
+                            <td><span class="badge bg-success">Pass</span></td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects" class="py-5 bg-white">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                <i class="bi bi-folder-fill"></i>
+                My Projects
+            </h2>
+
+            <div class="row g-4">
+
+                <div class="col-lg-6">
+
+                    <div class="card h-100 shadow-lg border-0 rounded-4">
+
+                        <div class="card-body">
+
+                            <h3 class="text-primary">
+                                Smart Parking System
+                            </h3>
+
+                            <p class="text-secondary mt-3">
+
+                                A web-based parking management system that helps
+                                users locate available parking slots, manage
+                                parking efficiently and reduce traffic congestion.
+
+                            </p>
+
+                            <span class="badge bg-primary">HTML</span>
+                            <span class="badge bg-success">CSS</span>
+                            <span class="badge bg-warning text-dark">JavaScript</span>
+                            <span class="badge bg-info">Bootstrap</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="card h-100 shadow-lg border-0 rounded-4">
+
+                        <div class="card-body">
+
+                            <h3 class="text-primary">
+                                Social Event Management
+                            </h3>
+
+                            <p class="text-secondary mt-3">
+
+                                An online event booking platform where users can
+                                book weddings, birthday parties and social events.
+                                Includes Admin Dashboard, Event Management,
+                                Reviews and Booking System.
+
+                            </p>
+
+                            <span class="badge bg-primary">React</span>
+                            <span class="badge bg-success">Node.js</span>
+                            <span class="badge bg-danger">MySQL</span>
+                            <span class="badge bg-info">Bootstrap</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===== Part 3 starts from Contact Section ===== -->
+         <!-- ================= CONTACT SECTION ================= -->
+
+    <section id="contact" class="py-5">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                <i class="bi bi-envelope-paper-fill"></i>
+                Contact Me
+            </h2>
+
+            <div class="row g-4">
+
+                <!-- Contact Information -->
+
+                <div class="col-lg-5">
+
+                    <div class="card border-0 shadow-lg rounded-4 h-100">
+
+                        <div class="card-body p-4">
+
+                            <h3 class="text-primary mb-4">
+                                Contact Information
+                            </h3>
+
+                            <p>
+                                <i class="bi bi-person-fill text-primary"></i>
+                                <strong>Name :</strong> Bodapati Mani Babu
+                            </p>
+
+                            <p>
+                                <i class="bi bi-envelope-fill text-primary"></i>
+                                <strong>Email :</strong> manibabubodapoati49@gmail.com
+                            </p>
+
+                            <p>
+                                <i class="bi bi-telephone-fill text-primary"></i>
+                                <strong>Phone :</strong> +91 8333033299
+                            </p>
+
+                            <p>
+                                <i class="bi bi-geo-alt-fill text-primary"></i>
+                                <strong>Location :</strong> Visakhapatnam,
+                                Andhra Pradesh
+                            </p>
+
+                            <p>
+                                <i class="bi bi-building text-primary"></i>
+                                <strong>College :</strong> ANITS Engineering
+                                College
+                            </p>
+
+                            <hr>
+
+                            <h5 class="text-primary mb-3">
+                                Follow Me
+                            </h5>
+
+                            <a href="#" class="btn btn-dark me-2 mb-2">
+                                <i class="bi bi-github"></i> GitHub
+                            </a>
+
+                            <a href="#" class="btn btn-primary me-2 mb-2">
+                                <i class="bi bi-linkedin"></i> LinkedIn
+                            </a>
+
+                            <a href="#" class="btn btn-danger mb-2">
+                                <i class="bi bi-google"></i> Gmail
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Contact Form -->
+
+                <div class="col-lg-7">
+
+                    <div class="card border-0 shadow-lg rounded-4">
+
+                        <div class="card-body p-4">
+
+                            <h3 class="text-primary mb-4">
+                                Send a Message
+                            </h3>
+
+                            <form>
+
+                                <div class="mb-3">
+
+                                    <label class="form-label">
+                                        Full Name
+                                    </label>
+
+                                    <input type="text"
+                                        class="form-control"
+                                        placeholder="Enter your name">
+
+                                </div>
+
+                                <div class="mb-3">
+
+                                    <label class="form-label">
+                                        Email Address
+                                    </label>
+
+                                    <input type="email"
+                                        class="form-control"
+                                        placeholder="Enter your email">
+
+                                </div>
+
+                                <div class="mb-3">
+
+                                    <label class="form-label">
+                                        Subject
+                                    </label>
+
+                                    <input type="text"
+                                        class="form-control"
+                                        placeholder="Subject">
+
+                                </div>
+
+                                <div class="mb-3">
+
+                                    <label class="form-label">
+                                        Message
+                                    </label>
+
+                                    <textarea class="form-control"
+                                        rows="5"
+                                        placeholder="Write your message..."></textarea>
+
+                                </div>
+
+                                <button class="btn btn-primary btn-lg">
+                                    <i class="bi bi-send-fill"></i>
+                                    Send Message
+                                </button>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="bg-primary text-white pt-5 pb-3">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-4 mb-4">
+
+                    <h4>
+                        <i class="bi bi-person-circle"></i>
+                        Student Profile
+                    </h4>
+
+                    <p class="mt-3">
+
+                        A responsive Student Profile webpage
+                        designed using HTML5, CSS and Bootstrap 5.
+
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4 mb-4">
+
+                    <h4>Quick Links</h4>
+
+                    <ul class="list-unstyled mt-3">
+
+                        <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="#about" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="#skills" class="text-white text-decoration-none">Skills</a></li>
+                        <li><a href="#academics" class="text-white text-decoration-none">Academics</a></li>
+                        <li><a href="#projects" class="text-white text-decoration-none">Projects</a></li>
+                        <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-4 mb-4">
+
+                    <h4>College</h4>
+
+                    <p class="mt-3">
+                        ANITS Engineering College
+                    </p>
+
+                    <p>
+                        Information Technology Department
+                    </p>
+
+                    <p>
+                        Visakhapatnam,
+                        Andhra Pradesh
+                    </p>
+
+                </div>
+
+            </div>
+
+            <hr class="border-light">
+
+            <div class="text-center">
+
+                <p class="mb-0">
+
+                    © 2026 Bodapati Mani Babu |
+                    ANITS Engineering College |
+                    All Rights Reserved.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JS Bundle (required only for the mobile navbar toggle) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
