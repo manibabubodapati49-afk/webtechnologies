@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Portal</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#e6f0ff;
+        }
+
+        .page{
+            display:none;
+            padding:30px;
+        }
+
+        #homePage{
+            display:block;
+            text-align:center;
+            margin-top:100px;
+        }
+
+        h1{
+            color:#0047ab;
+            margin-bottom:20px;
+        }
+
+        .btn{
+            background:#0047ab;
+            color:white;
+            border:none;
+            padding:12px 20px;
+            margin:10px;
+            border-radius:5px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        .btn:hover{
+            background:#003580;
+        }
+
+        .form-box{
+            width:500px;
+            background:white;
+            margin:auto;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0px 0px 10px gray;
+        }
+
+        label{
+            display:block;
+            margin-top:12px;
+            font-weight:bold;
+        }
+
+        input,select{
+            width:100%;
+            padding:8px;
+            margin-top:5px;
+            border:1px solid gray;
+            border-radius:5px;
+        }
+
+        .gender input{
+            width:auto;
+            margin-right:5px;
+        }
+
+        .gender{
+            margin-top:8px;
+        }
+
+        #message{
+            text-align:center;
+            margin-top:15px;
+            font-weight:bold;
+        }
+
+        .data-box{
+            width:500px;
+            background:white;
+            margin:auto;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0px 0px 10px gray;
+        }
+
+        #recentData{
+            margin-top:20px;
+            line-height:35px;
+            font-size:18px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- HOME PAGE -->
+
+<div id="homePage" class="page">
+
+    <h1>Student Registration Portal</h1>
+
+    <button class="btn" onclick="showRegistration()">
+        Registration
+    </button>
+
+    <button class="btn" onclick="showRecent()">
+        Recent Data
+    </button>
+
+</div>
+
+
+
+<!-- REGISTRATION PAGE -->
+
+<div id="registerPage" class="page">
+
+    <div class="form-box">
+
+        <h1>Student Registration</h1>
+
+        <label>Full Name</label>
+        <input type="text" id="name">
+
+        <label>Roll Number</label>
+        <input type="text" id="roll">
+
+        <label>Email</label>
+        <input type="text" id="email">
+
+        <label>Mobile Number</label>
+        <input type="text" id="mobile">
+
+        <label>Password</label>
+        <input type="password" id="password">
+
+        <label>Confirm Password</label>
+        <input type="password" id="confirm">
+
+        <label>Gender</label>
+
+        <div class="gender">
+            <input type="radio" name="gender" value="Male">Male
+            <input type="radio" name="gender" value="Female">Female
+        </div>
+
+        <label>Department</label>
+
+        <select id="department">
+
+            <option value="">Select Department</option>
+
+            <option>CSE</option>
+            <option>CSM</option>
+            <option>CSD</option>
+            <option>CSIT</option>
+            <option>IT</option>
+            <option>AIML</option>
+            <option>AIDS</option>
+            <option>ECE</option>
+            <option>EEE</option>
+            <option>Mechanical</option>
+            <option>Civil</option>
+
+        </select>
+
+        <label>Date of Birth</label>
+
+        <input type="date" id="dob">
+
+        <br><br>
+
+        <button class="btn" onclick="submitForm()">
+            Submit
+        </button>
+
+        <button class="btn" onclick="goHome()">
+            Home
+        </button>
+
+        <p id="message"></p>
+
+    </div>
+
+</div>
+
+
+
+<!-- RECENT DATA PAGE -->
+
+<div id="recentPage" class="page">
+
+    <div class="data-box">
+
+        <h1>Recent Registration</h1>
+
+        <div id="recentData">
+
+            No Data Submitted Yet
+
+        </div>
+
+        <br>
+
+        <button class="btn" onclick="showRegistration()">
+            New Registration
+        </button>
+
+        <button class="btn" onclick="goHome()">
+            Home
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+var studentName="";
+var studentRoll="";
+var studentEmail="";
+var studentMobile="";
+var studentGender="";
+var studentDepartment="";
+var studentDob="";
+
+function hidePages()
+{
+    document.getElementById("homePage").style.display="none";
+    document.getElementById("registerPage").style.display="none";
+    document.getElementById("recentPage").style.display="none";
+}
+
+function goHome()
+{
+    hidePages();
+    document.getElementById("homePage").style.display="block";
+}
+
+function showRegistration()
+{
+    hidePages();
+    document.getElementById("registerPage").style.display="block";
+}
+
+function showRecent()
+{
+    hidePages();
+    document.getElementById("recentPage").style.display="block";
+}
+{
+    hidePages();
+    document.getElementById("recentPage").style.display="block";
+}
+
+function submitForm()
+{
+    var name=document.getElementById("name").value;
+    var roll=document.getElementById("roll").value;
+    var email=document.getElementById("email").value;
+    var mobile=document.getElementById("mobile").value;
+    var password=document.getElementById("password").value;
+    var confirm=document.getElementById("confirm").value;
+    var department=document.getElementById("department").value;
+    var dob=document.getElementById("dob").value;
+
+    var message=document.getElementById("message");
+
+    if(name=="")
+    {
+        message.style.color="red";
+        message.innerHTML="Enter Full Name";
+        return;
+    }
+
+    var rollPattern=/^[A-Za-z0-9]+$/;
+
+    if(!rollPattern.test(roll))
+    {
+        message.style.color="red";
+        message.innerHTML="Roll Number must contain letters and numbers only";
+        return;
+    }
+
+    var emailPattern=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    if(!emailPattern.test(email))
+    {
+        message.style.color="red";
+        message.innerHTML="Enter Valid Email";
+        return;
+    }
+
+    if(mobile.length!=10 || isNaN(mobile))
+    {
+        message.style.color="red";
+        message.innerHTML="Enter 10 Digit Mobile Number";
+        return;
+    }
+
+    if(password.length<8)
+    {
+        message.style.color="red";
+        message.innerHTML="Password must be at least 8 characters";
+        return;
+    }
+
+    if(password!=confirm)
+    {
+        message.style.color="red";
+        message.innerHTML="Passwords do not match";
+        return;
+    }
+
+    var gender=document.getElementsByName("gender");
+    var selectedGender="";
+
+    for(var i=0;i<gender.length;i++)
+    {
+        if(gender[i].checked)
+        {
+            selectedGender=gender[i].value;
+        }
+    }
+
+    if(selectedGender=="")
+    {
+        message.style.color="red";
+        message.innerHTML="Select Gender";
+        return;
+    }
+
+    if(department=="")
+    {
+        message.style.color="red";
+        message.innerHTML="Select Department";
+        return;
+    }
+
+    if(dob=="")
+    {
+        message.style.color="red";
+        message.innerHTML="Select Date of Birth";
+        return;
+    }
+
+    // Store Data in Variables
+
+    studentName=name;
+    studentRoll=roll;
+    studentEmail=email;
+    studentMobile=mobile;
+    studentGender=selectedGender;
+    studentDepartment=department;
+    studentDob=dob;
+
+    // Show Recent Data
+
+    document.getElementById("recentData").innerHTML=
+    "<b>Name :</b> "+studentName+"<br><br>"+
+    "<b>Roll Number :</b> "+studentRoll+"<br><br>"+
+    "<b>Email :</b> "+studentEmail+"<br><br>"+
+    "<b>Mobile :</b> "+studentMobile+"<br><br>"+
+    "<b>Gender :</b> "+studentGender+"<br><br>"+
+    "<b>Department :</b> "+studentDepartment+"<br><br>"+
+    "<b>Date of Birth :</b> "+studentDob;
+
+    // Success Message
+
+    message.style.color="green";
+    message.innerHTML="Registration Successful";
+
+    // Clear Form
+
+    document.getElementById("name").value="";
+    document.getElementById("roll").value="";
+    document.getElementById("email").value="";
+    document.getElementById("mobile").value="";
+    document.getElementById("password").value="";
+    document.getElementById("confirm").value="";
+    document.getElementById("department").value="";
+    document.getElementById("dob").value="";
+
+    for(var i=0;i<gender.length;i++)
+    {
+        gender[i].checked=false;
+    }
+
+    showRecent();
+}
+
+</script>
+
+</body>
+</html>
